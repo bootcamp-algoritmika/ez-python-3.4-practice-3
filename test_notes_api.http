@@ -1,0 +1,57 @@
+GET http://127.0.0.1:1234/notes/?likes=gt:2
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1234/notes/6
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:1234/notes/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "header": "My Note API",
+  "text": "Text API",
+  "tags": ["a", "b", "c", "API"],
+  "author": "me API",
+  "likes": 1000,
+  "comments": 2000,
+  "color": 111
+}
+
+###
+
+PUT http://127.0.0.1:1234/notes/3
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 3,
+  "header": "---",
+  "text": "----",
+  "tags": ["a", "b", "c", "API"],
+  "author": "-",
+  "likes": 0,
+  "comments": 0,
+  "color": 0,
+  "created_date": "1635334976",
+  "modified_date": "1635334976"
+}
+
+###
+
+PATCH http://127.0.0.1:1234/notes/3
+Accept: application/json
+Content-Type: application/json
+
+{
+  "header": "My Note API",
+  "text": "Text API"
+}
+
+###
+
+DELETE http://127.0.0.1:1234/notes/3
